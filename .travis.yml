@@ -19,6 +19,11 @@ addons:
       - libmpfr-dev
       - libmpc-dev
 
+# cache directory persists between runs (prebuild stuff here, like gcc, cmake, mpich)
+cache:
+  directories:
+    - $HOME/cache
+
 # define build matrix using os/compiler/env
 os:
 - linux

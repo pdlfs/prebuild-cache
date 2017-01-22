@@ -35,6 +35,14 @@ export CACHE_PREBUILD=1
 ./cmake/travis-checkcache.sh
 
 #
+# check if it did everything or if we need another go
+#
+if [ -f /tmp/cache_prebuild_retry ] ; then
+    echo prebuild needs up to retry, exiting early ...
+    exit 0
+fi
+
+#
 # generate tar file
 #
 target=cache-${TRAVIS_OS_NAME}-${CC}.tgz
