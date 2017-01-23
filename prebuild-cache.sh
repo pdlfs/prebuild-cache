@@ -17,9 +17,9 @@ if [ x$CC = x ]; then
 fi
 
 #
-# build a fake cache directory and tmp working area, checkout pdlfs-common
+# build cache directory and tmp working area, checkout pdlfs-common
+# to totally reset, use travis web page to dump the cache
 #
-rm -rf ${HOME}/cache
 mkdir -p ${HOME}/cache
 mkdir -p ${HOME}/tmp
 cd ${HOME}/tmp
